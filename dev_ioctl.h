@@ -29,7 +29,7 @@ from /usr/include/asm-generic/ioctl.h
 */
 #define IOC_MAGIC_ID 		'h'
 #define IOC_GET_STRING 		_IOR(IOC_MAGIC_ID, 1, struct _TRANSFER_STRING)
-#define IOC_PRINTK_MES		_IOR(IOC_MAGIC_ID, 2, struct _GET_MESSAGE)
+#define IOC_PRINTK_MES		_IOW(IOC_MAGIC_ID, 2, struct _GET_MESSAGE)
 #define IOC_GET_ALL_PARAM	_IOR(IOC_MAGIC_ID, 3, struct _BIG_BUFFER_ALL_PARAM)
 
 #define LOG(...) 		printk(KERN_INFO "INFO: " __VA_ARGS__)
